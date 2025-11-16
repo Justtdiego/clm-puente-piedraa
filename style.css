@@ -1055,3 +1055,174 @@ footer {
     margin-top: 20px;
   }
 }
+
+/* --- BANNER ESENCIA (igual al estilo CRECER) --- */
+.banner-esencia {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url("https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/532154237_771792588696868_6658381754976005029_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ugV5LcOX1RIQ7kNvwH1cf1w&_nc_oc=Adk7n8JInrTWlFqOXQlbZH4YFVUC9C0BEX2piaz0rGA1aY9lToLeA7SgikQqFuvUMoc&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=zhlq7-yed9cGNj-ITfYTWQ&oh=00_AfiXqrt6eDxuIR5LmSje4RMxRKXq09qZOG_V9AXaKkc2FA&oe=691ABE60");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-esencia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.55);
+}
+
+.overlay-esencia {
+  position: relative;
+  z-index: 2;
+}
+
+.esencia-logo {
+  width: 260px;
+  margin-bottom: 20px;
+}
+
+.esencia-titulo {
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-esencia {
+    height: 55vh;
+  }
+  .esencia-logo {
+    width: 200px;
+  }
+  .esencia-titulo {
+    font-size: 1.8rem;
+    letter-spacing: 6px;
+  }
+}
+
+/* --- BANNER ESENCIA --- */
+.banner-esencia {
+  position: relative;
+  width: 100%;
+  height: 85vh; /* Puedes ajustar */
+  background-image: url("https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/532154237_771792588696868_6658381754976005029_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ugV5LcOX1RIQ7kNvwH1cf1w&_nc_oc=Adk7n8JInrTWlFqOXQlbZH4YFVUC9C0BEX2piaz0rGA1aY9lToLeA7SgikQqFuvUMoc&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=zhlq7-yed9cGNj-ITfYTWQ&oh=00_AfiXqrt6eDxuIR5LmSje4RMxRKXq09qZOG_V9AXaKkc2FA&oe=691ABE60"); /* Cambia tu fondo */
+  background-size: cover;
+  background-position: center;
+  margin-top: calc(var(--topbar-h) + var(--header-h)); /* 🔥 IMPORTANTE */
+}
+
+.esencia-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45); /* Oscurece para que se vea bonito */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.esencia-logo {
+  width: 250px; /* Ajustable */
+  margin-bottom: 15px;
+}
+
+.esencia-title {
+  font-size: 3rem;
+  color: white;
+  letter-spacing: 12px;
+  font-weight: 700;
+}
+
+/* --- SECCIÓN DESCRIPCIÓN ESENCIA --- */
+.esencia-descripcion {
+    text-align: center;
+    padding: 80px 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.esencia-descripcion h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.esencia-descripcion p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.horarios-modernos {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.horarios-modernos h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #003c99;
+  margin-bottom: 50px;
+}
+
+.horarios-modernos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.horario-card-moderno {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.horario-card-moderno:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.horario-card-moderno img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.horario-texto {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.horario-btn {
+  width: 140px;
+}
