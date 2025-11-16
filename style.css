@@ -1226,3 +1226,254 @@ footer {
 .horario-btn {
   width: 140px;
 }
+
+.oracion-bloque {
+  width: 100%;
+  height: 80vh;                 /* ✔ altura suficiente */
+  margin-top: calc(var(--topbar-h) + var(--header-h));
+  padding: 120px 20px;
+  background-image: url('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/568194951_828464009696392_5148578211355809322_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_rXq4bJ9pgEQ7kNvwF1FCyq&_nc_oc=Adnvb0klWKp_RvO-8XvsqIjI_yVW-SQmquCYAPvCfDSnsApbNh5FLpT1lPdLpfaahYI&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=_1Dh-4xhUUvK-TR6QxIoPw&oh=00_AfiHrYOfC8Lb77KyTbC2ALFl5Yt3qeWp7VQZFV9cmX7f7w&oe=691F363A');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oracion-bloque::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.oracion-contenido {
+  position: relative;
+  text-align: center;
+  max-width: 900px;
+  z-index: 2;
+}
+
+.oracion-contenido p {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ===== SECCIÓN PETICIONES ===== */
+
+.peticiones-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.peticiones-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Texto a la izquierda */
+.peticiones-texto {
+  text-align: left;
+}
+
+.peticiones-texto h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.peticiones-texto p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  max-width: 90%;
+}
+
+/* FORMULARIO */
+.peticiones-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left; /* 📌 Esto arregla la alineación */
+}
+
+.peticiones-formulario label {
+  font-weight: 600;
+  color: #222;
+  text-align: left; /* 📌 Asegura alineación izquierda */
+}
+
+.peticiones-formulario input,
+.peticiones-formulario textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.peticiones-formulario textarea {
+  height: 160px;
+  resize: vertical;
+}
+
+.peticiones-formulario button {
+  width: 120px;
+  background-color: #000;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.peticiones-formulario button:hover {
+  background-color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .peticiones-container {
+    grid-template-columns: 1fr;
+  }
+
+  .peticiones-formulario button {
+    margin-left: 0;
+  }
+}
+
+.galeria-oracion {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0; /* Sin separación entre imágenes */
+}
+
+.galeria-container img {
+  width: 100%;
+  height: 300px; /* Ajusta si quieres más alto */
+  object-fit: cover; /* Recorta bien como en tu ejemplo */
+  display: block;
+}
+
+/* === FIX GENERAL (quita centrado global del body) === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fb;
+  color: #333;
+  /* ❌ Se eliminó text-align: center porque dañaba el layout */
+}
+
+/* === BANNER PODCAST / PRÉDICAS === */
+.banner-podcast {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #003c99, #0056d2); /* 🎨 degradado CLM */
+    margin-top: calc(var(--topbar-h) + var(--header-h));
+}
+
+
+
+.podcast-content {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Texto del banner */
+.podcast-text {
+    flex: 1;
+    color: white;
+    text-align: left; /* 🔥 Ahora sí queda como el ejemplo */
+}
+
+.podcast-text h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.podcast-text p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Iconos de redes */
+.podcast-icons img {
+    width: 55px;
+    margin-right: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Imagen mockup */
+.podcast-phone img {
+    width: 330px;
+    display: block;
+}
+
+/* === SECCIÓN DE PRÉDICAS === */
+.predicas-section {
+    width: 100%;
+    padding: 60px 10%;
+    text-align: center;
+    display: block; /* 🔥 asegura que baje debajo del banner */
+}
+
+/* Cards de predicas */
+.predicas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.predica-card h3 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.predica-card p {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* RESPONSIVE para celular */
+@media (max-width: 900px) {
+  .podcast-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .podcast-text {
+    text-align: center;
+  }
+
+  .predicas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
