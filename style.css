@@ -50,6 +50,45 @@ nav a {
 }
 nav a:hover { color: #0073ff; }
 
+/* SUBMENÚ DENTRO DE DROPDOWN */
+.dropdown-sub {
+  position: relative;
+}
+
+.dropdown-sub-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown-sub-menu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  min-width: 180px;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.dropdown-sub:hover .dropdown-sub-menu {
+  display: block;
+}
+
+.dropdown-sub-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+}
+
+.dropdown-sub-menu a:hover {
+  background: #f2f2f2;
+}
+
 /* --- BANNER PRINCIPAL — CORREGIDO --- */
 .banner {
   position: relative;
@@ -2193,4 +2232,338 @@ footer {
 
 .gallery-grid img:hover {
   transform: scale(1.03);
+}
+
+/*CLM TEENS*/
+:root {
+  --azul: #0038ff;
+  --azul-dark: #001a80;
+  --fb: #1877f2;
+  --insta: #e1306c;
+  --max-width: 1200px;
+}
+
+/* GENERALES */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f3f5ff;
+  color: #222;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--azul-dark);
+}
+
+/*      BANNER TEENS    */
+/* ==================== */
+
+.teens-banner {
+  width: 100%;
+  height: 100vh; /* Full pantalla */
+  background-image: url("https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/480315785_122196888272189160_6779565070733900285_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VARQIR8bFKgQ7kNvwHx1x7T&_nc_oc=AdmS_4rqE3p8WHPj7RuvTvC_8_ePQ1SxTB5el9u5KfwsLoPLFZ0nNtepu2b5uGThb0o&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=5ChDKRM2b93PkbTnTN68hQ&oh=00_Afi-rrwhx8cnOa92bk9JE4mTnHReLRXLWn5pyVCgFVerEQ&oe=6922E266"); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Oscurece un poco la imagen para que el texto destaque */
+.teens-banner-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  top: 0;
+  left: 0;
+}
+
+.teens-banner-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.teens-banner-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.teens-banner-content p {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+/*     HORARIOS TEENS       */
+/* ========================= */
+
+.teens-horarios {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f5f7ff;
+}
+
+.teens-horarios h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1a2a6c;
+}
+
+.horarios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.horario-card {
+  background: white;
+  padding: 25px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  width: 260px;
+}
+
+.horario-card h3 {
+  font-size: 1.4rem;
+  color: #1a2a6c;
+  margin-bottom: 10px;
+}
+
+.horario-card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* 🔗 REDES */
+.redes {
+  padding: 40px 20px;
+}
+
+.redes-flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.red {
+  padding: 14px 26px;
+  border-radius: 14px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.insta { background: var(--insta); }
+.face { background: var(--fb); }
+
+/* ⭐ ACTIVIDADES */
+.actividades {
+  padding: 40px 20px;
+}
+
+.actividades-grid {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.actividad {
+  background: white;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px #0001;
+  text-align: center;
+}
+
+.actividad img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 🖼️ GALERÍA */
+.galeria {
+  padding: 40px 20px;
+}
+
+.galeria-grid {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 📌 FOOTER */
+footer {
+  background: var(--azul-dark);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+:root {
+  --clm-blue: #1f4da3;
+  --clm-dark: #0b1a33;
+  --max-width: 1200px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f6fb;
+  color: #222;
+}
+
+/* 🔵 BANNER */
+.banner-jovenes {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/499931609_122211256934166374_4636965720074470837_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=PKfrLbFtPwMQ7kNvwGMX1Wl&_nc_oc=AdmNWlwH7wV-iUdP_-r6kxDkGRBI32TLo0AUYdmcVyLHi3kd5VlMGWdvMnX6Mk8aACo&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=qXus4hXlpXAfwXHhmuCgrw&oh=00_AfjIUbfg3_5ttdTF42KSJiedhTGdw1SJmQBwyRSDb9dLDg&oe=6922DAD9');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.banner-text {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 3.8rem;
+  margin: 0;
+}
+
+.banner-text p {
+  font-size: 1.3rem;
+}
+
+/* 🕒 HORARIOS */
+.meet-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.meet-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.meet-card {
+  background: white;
+  padding: 25px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  width: 230px;
+}
+
+/* 📱 REDES */
+.social-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.social-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.social-card {
+  width: 180px;
+  padding: 18px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social-card img {
+  width: 40px;
+  margin-bottom: 8px;
+}
+
+.instagram { background: #d62976; }
+.facebook { background: #1877f2; }
+
+/* ⭐ LO QUE HACEMOS */
+.about-section {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+/* 🖼️ GALERÍA */
+.gallery-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  max-width: var(--max-width);
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* 🔚 FOOTER */
+.footer {
+  background: var(--clm-dark);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
 }
