@@ -1,8 +1,3 @@
-:root {
-  --topbar-h: 56px;
-  --header-h: 72px;
-  --max-width: 1200px;
-}
 
 /* --- ESTILOS GENERALES --- */
 * { box-sizing: border-box; }
@@ -17,54 +12,11 @@ body {
   text-align: center;
 }
 
-/* --- BARRA SUPERIOR (azul) --- */
-.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--topbar-h);
-  background-color: #007bff;
-  color: white;
-  font-size: 1em;
-  font-weight: 600;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-}
-
-.top-container {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.top-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-icons a {
-  color: white;
-  margin: 0 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.social-icons a:hover {
-  text-decoration: underline;
-}
 
 /* --- ENCABEZADO PRINCIPAL --- */
 header {
   position: fixed;
-  top: var(--topbar-h);
+  top: 0;
   left: 0;
   right: 0;
   height: var(--header-h);
@@ -86,7 +38,7 @@ header {
 }
 
 .logo-section { display: flex; align-items: center; }
-.logo { height: 50px; }
+.logo { height: 60px; }
 
 /* --- NAV --- */
 nav a {
@@ -102,7 +54,7 @@ nav a:hover { color: #0073ff; }
 .banner {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
   margin-top: calc(var(--topbar-h) + var(--header-h));
   background-color: transparent !important; /* ← FIX */
@@ -868,7 +820,7 @@ footer {
 /* --- BANNER SOY NUEVO --- */
 .banner-soy-nuevo {
   margin-top: calc(var(--topbar-h) + var(--header-h));
-  height: 85vh;
+  height: 100vh;
   background-image: url('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/519616037_750570390819088_3877499279327010108_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vG0lb42CcEUQ7kNvwGdbvrF&_nc_oc=AdkYAJvNrtI53RDFLm7fL-QmaseCTqIvSGYeOlwzdP56zU6ySb20BbI_sbc-Hizpui4&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=afxJOJiZyN0ubLB4kzslJQ&oh=00_AfhGiptxG3JWOP8l-hcjqM5kVsxG5FZ8rkyZN3uPmFMtnA&oe=6921893D');
   background-size: cover;
   background-position: center;
@@ -1065,15 +1017,15 @@ footer {
   }
 }
 
-/* --- BANNER ESENCIA --- */
+
+/* --- NUEVO BANNER ESENCIA (corregido) --- */
 .banner-esencia {
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   background-image: url("https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/518361547_754197160456411_283823750724590786_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=MkVIn28tGhQQ7kNvwG8EJNj&_nc_oc=AdksvhALbZblbMPS4ehyDESKhj8e7mmr-AC76FFtdXgeW0NfnGjln1U04MCQBX-xvIQ&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=qDtZ8mcmS9dtp1pJflNDPA&oh=00_Afib8FJdxUJs7WFbCFUqVkcQi59ROGRMHqaLksUeUR0QlQ&oe=69217F0C");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   margin-top: calc(var(--topbar-h) + var(--header-h));
 }
 
@@ -1085,48 +1037,6 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.55);
-}
-
-.overlay-esencia {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.esencia-logo {
-  width: 260px;
-  margin-bottom: 20px;
-}
-
-.esencia-titulo {
-  color: white;
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: 12px;
-}
-
-@media (max-width: 768px) {
-  .banner-esencia {
-    height: 55vh;
-  }
-  .esencia-logo {
-    width: 200px;
-  }
-  .esencia-titulo {
-    font-size: 1.8rem;
-    letter-spacing: 6px;
-  }
-}
-
-/* --- NUEVO BANNER ESENCIA (corregido) --- */
-.banner-esencia {
-  position: relative;
-  width: 100%;
-  height: 85vh;
-  background-image: url("https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/518361547_754197160456411_283823750724590786_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=MkVIn28tGhQQ7kNvwG8EJNj&_nc_oc=AdksvhALbZblbMPS4ehyDESKhj8e7mmr-AC76FFtdXgeW0NfnGjln1U04MCQBX-xvIQ&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=qDtZ8mcmS9dtp1pJflNDPA&oh=00_Afib8FJdxUJs7WFbCFUqVkcQi59ROGRMHqaLksUeUR0QlQ&oe=69217F0C");
-  background-size: cover;
-  background-position: center;
-  margin-top: calc(var(--topbar-h) + var(--header-h));
 }
 
 .esencia-overlay {
@@ -1234,7 +1144,7 @@ footer {
 /* --- SECCIÓN ORACIÓN - BANNER PRINCIPAL --- */
 .oracion-bloque {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   margin-top: calc(var(--topbar-h) + var(--header-h));
   padding: 120px 20px;
 
@@ -1558,7 +1468,7 @@ footer {
 .banner-bautismo {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   margin-top: calc(var(--topbar-h) + var(--header-h));
   background-image: url("https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/486811586_666931679182960_7014709177292593624_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=2BYS5bd4JAIQ7kNvwEP43ef&_nc_oc=AdkYz7_R_AviDCm5wRi7dcAkpf4u6-A4jgaRkvbSKJiwbZKgPRo8KgtyiZExDMNnfgk&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=8UkebhHJOVxwGE1YXSujyg&oh=00_AfhQcV9F43mIm5hIEcHYCMq7BaYrNIUT8BbY_sXNt8mWsQ&oe=69218FCF"); /* 🔁 Cámbiala por una foto de CLM si quieres */
   background-size: cover;
@@ -1835,4 +1745,452 @@ footer {
   .bautismo-overlay {
     padding: 35px 20px;
   }
+}
+
+/* ============================================================
+   🔵 KIDS CLM — ESTILOS
+   ============================================================ */
+
+/* --- BANNER PRINCIPAL --- */
+.banner-kids {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: calc(var(--topbar-h) + var(--header-h));
+  background-image: url("https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/484997297_658942063486757_7155963115974737331_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SB3d1_kE3iYQ7kNvwG2bSAB&_nc_oc=AdlkTj1r5MRoiJcjsgVuEZI0emLf8zACN8SZ9wr1zSPjyYGw4RraX5Yq6Jq3Bg2Ek3E&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=KkytxXIltI7s_sD0plhy7w&oh=00_AfgMtnFsZx65sNv8JnYtA8tcLmk2NHf3E8bZbKfwKTaYWA&oe=692287E5");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kids-overlay {
+  background: rgba(0,0,0,0.50);
+  padding: 50px 30px;
+  border-radius: 14px;
+  text-align: center;
+  max-width: 750px;
+  color: white;
+}
+
+.kids-overlay h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.kids-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* --- BOTONES KIDS --- */
+.btn-azul {
+  background-color: #003c99;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-azul:hover {
+  background-color: #002d72;
+}
+
+
+/* ============================================================
+   🔵 INTRO
+   ============================================================ */
+.kids-intro {
+  padding: 80px 20px 50px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.kids-intro h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.kids-intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+
+/* ============================================================
+   🔵 VALORES
+   ============================================================ */
+.kids-valores {
+  padding: 70px 20px;
+  background-color: #f8f9ff;
+  text-align: center;
+}
+
+.kids-valores h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.kids-valores-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.kids-valor-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.kids-valor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.kids-valor-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #003c99;
+  margin-bottom: 10px;
+}
+
+.kids-valor-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   🔵 PROGRAMAS POR EDAD
+   ============================================================ */
+.kids-edades {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.kids-edades h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.kids-edades-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.kids-edad-card {
+  background: #f8f9fb;
+  border-radius: 14px;
+  padding: 25px 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+  transition: 0.3s;
+}
+
+.kids-edad-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 7px 18px rgba(0,0,0,0.13);
+}
+
+.kids-edad-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #0056d2;
+}
+
+.kids-edad-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+
+/* ============================================================
+   🔵 HORARIOS
+   ============================================================ */
+.kids-horarios {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f8f9ff;
+}
+
+.kids-horarios h2 {
+  font-size: 2.3rem;
+  margin-bottom: 25px;
+}
+
+.kids-horarios-lista {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.kids-horarios-lista li {
+  margin-bottom: 10px;
+}
+
+
+/* ============================================================
+   🔵 VOLUNTARIOS
+   ============================================================ */
+.kids-voluntarios {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #003c99, #0056d2);
+  color: white;
+  text-align: center;
+}
+
+.kids-voluntarios h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.kids-voluntarios p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+
+/* ============================================================
+   🔵 FORMULARIO
+   ============================================================ */
+.kids-cta {
+  padding: 90px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.kids-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.kids-cta h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.kids-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kids-form input,
+.kids-form textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.kids-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.kids-form button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #003c99;
+  color: white;
+  transition: 0.3s;
+}
+
+.kids-form button:hover {
+  background-color: #002d72;
+}
+
+
+/* ============================================================
+   🔵 RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .kids-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .kids-overlay p {
+    font-size: 1rem;
+  }
+
+  .banner-kids {
+    height: 60vh;
+  }
+}
+
+/* ============================================================
+   🔵 KIDS PRESENCIAL
+   ============================================================ */
+
+.kids-presencial {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.kids-presencial h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.kids-presencial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+}
+
+/* Imagen */
+.kids-presencial-img img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Texto */
+.kids-presencial-texto p {
+  font-size: 1.15rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Botón */
+.btn-kids-registro {
+  display: inline-block;
+  background-color: #000;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.btn-kids-registro:hover {
+  background-color: #333;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .kids-presencial-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .kids-presencial-texto {
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   🔵 FACEBOOK KIDS BLOCK
+   ============================================================ */
+
+.kids-facebook {
+  background-color: #1877f2; /* Azul Facebook */
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.kids-facebook h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.kids-facebook p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+}
+
+.btn-facebook {
+  background: #fff;
+  color: #1877f2;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn-facebook i {
+  margin-left: 8px;
+}
+
+.btn-facebook:hover {
+  background: #f0f0f0;
+}
+
+/* --- GALERÍA CLM KIDS --- */
+.kids-gallery {
+  padding: 40px 20px;
+  background-color: #f8f9fb;
+  text-align: center;
+}
+
+.kids-gallery h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
 }
