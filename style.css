@@ -2567,3 +2567,75 @@ body {
   padding: 25px;
   margin-top: 40px;
 }
+
+/* ---------------------
+    🔹 BANNER DEVOCIONALES
+----------------------*/
+
+.banner-devocionales {
+  width: 100%;
+  height: 80vh;
+  background-image: url('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/539507651_783493690860091_3440305446893058536_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=zVZtaAgEy7cQ7kNvwGvV-jv&_nc_oc=Adnjg3ME6-aX_oDGaU0q8mo_1MhrL7xrdHnj5hZZ8i_OW4e1fHUZKW_EXW9ZEGpcb4A&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=SF0sz97TeALkihndIzDTaA&oh=00_AfgubE1kig6REYpU4A-gqLaXClarNu03kbSfN_04lf91kg&oe=6922D762');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.banner-devocionales::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.banner-devocionales .banner-text {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-devocionales h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.banner-devocionales p {
+  font-size: 20px;
+}
+
+/* ---------------------
+    🔹 LISTA DE DEVOCIONALES
+----------------------*/
+
+/* GRID DE TIKTOK */
+.tiktok-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Videos responsivos */
+.tiktok-embed {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* 📱 RESPONSIVE para celular */
+@media (max-width: 900px) {
+  .tiktok-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .tiktok-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
